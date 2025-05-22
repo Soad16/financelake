@@ -23,12 +23,15 @@ def display_dashboard():
 
         status, last_update, errors = read_logs_and_get_status()
 
-        print("╔═══════════════════════════════════════╗")
-        print("║      🖥️  INGESTION DASHBOARD CLI       ║")
-        print("╚═══════════════════════════════════════╝")
-        print(f"📌 Status       : {status}")
-        print(f"🕒 Last Update  : {last_update}")
+        print("╔════════════════════════════════════════╗")
+        print("║           🖥️  INGESTION DASHBOARD CLI           ║")
+        print("╚════════════════════════════════════════╝")
+        print()
+        print(f"📌 Status      : {status}")
+        print(f"🕒 Last Update : {last_update}")
+        print()
         print("⚠️ Errors:")
+
 
         if errors:
             for err in errors[-5:]:  # Affiche les 5 dernières erreurs si présentes
